@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-10-2019 a las 05:34:45
+-- Tiempo de generación: 01-11-2019 a las 00:05:21
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.3.10
 
@@ -34,13 +34,6 @@ CREATE TABLE `comentar` (
   `comentario` varchar(400) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `comentar`
---
-
-INSERT INTO `comentar` (`id`, `correo`, `comentario`) VALUES
-(1, 'nose', 'menos');
-
 -- --------------------------------------------------------
 
 --
@@ -49,19 +42,13 @@ INSERT INTO `comentar` (`id`, `correo`, `comentario`) VALUES
 
 CREATE TABLE `vivienda` (
   `id` int(20) NOT NULL,
-  `nombre` varchar(20) NOT NULL,
+  `tipo` varchar(20) NOT NULL,
   `ubicacion` varchar(20) NOT NULL,
-  `precio` int(20) NOT NULL
+  `foto` varchar(300) NOT NULL,
+  `precio` int(20) NOT NULL,
+  `lat` float NOT NULL,
+  `lng` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `vivienda`
---
-
-INSERT INTO `vivienda` (`id`, `nombre`, `ubicacion`, `precio`) VALUES
-(3, 'si', 'Casa', 3000),
-(4, 'si', 'Casa', 3000),
-(5, 'casa', 'medellin', 2400);
 
 --
 -- Índices para tablas volcadas
@@ -87,7 +74,7 @@ ALTER TABLE `vivienda`
 -- AUTO_INCREMENT de la tabla `comentar`
 --
 ALTER TABLE `comentar`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `vivienda`
